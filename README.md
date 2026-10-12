@@ -12,23 +12,11 @@ Then open `http://localhost:8000`.
 
 ## Media
 
-The project card currently uses `assets/multi-robot-demo.gif`, an optimized
-Gazebo and RViz recording. Optional additional assets for future project pages:
+- `assets/multi-robot-demo.gif`: optimized Gazebo and RViz coordination demo.
+- `assets/real-robot-demo.mp4`: compressed real-robot experiment video.
+- `assets/real-robot-demo-poster.jpg`: preview frame for the real-robot video.
 
-1. `assets/multi-robot-overview.webp`
-   - RViz overview showing both robots, paths, footprints and the map.
-   - Recommended size: 1600 × 1000 px or larger.
-2. `assets/narrow-passage-demo.gif`
-   - 12–20 second loop showing conflict detection, one robot yielding, release,
-     and both robots reaching the goal.
-   - Crop around RViz; avoid showing terminal windows or personal paths.
-3. `assets/conflict-markers.webp`
-   - Close-up showing red conflict markers, the yellow waiting point and the
-     green released markers.
-4. `assets/final-formation.webp`
-   - Both robots stopped side by side at the destination.
-
-Use descriptive alt text whenever adding or replacing media.
+Both are displayed at full project-card width with descriptive captions.
 
 ## Publishing
 
