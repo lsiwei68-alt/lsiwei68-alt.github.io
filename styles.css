@@ -22,7 +22,8 @@ body {
     var(--paper);
   background-size: 44px 44px;
   font-family: "Manrope", system-ui, sans-serif;
-  line-height: 1.65;
+  font-size: .96rem;
+  line-height: 1.6;
 }
 
 a { color: inherit; }
@@ -85,7 +86,7 @@ a { color: inherit; }
   width: min(1180px, calc(100% - 2.5rem));
   margin-inline: auto;
 }
-.section-block { padding-block: clamp(5rem, 11vw, 9rem); }
+.section-block { padding-block: clamp(4rem, 8vw, 7rem); }
 .hero {
   display: grid;
   grid-template-columns: 1.05fr .95fr;
@@ -99,7 +100,7 @@ a { color: inherit; }
 .project-number,
 .visual-caption {
   font-family: "DM Mono", monospace;
-  font-size: .75rem;
+  font-size: .7rem;
   letter-spacing: .12em;
   text-transform: uppercase;
 }
@@ -107,13 +108,13 @@ a { color: inherit; }
 h1, h2, h3, p { margin-top: 0; }
 h1 {
   margin-bottom: 1.5rem;
-  max-width: 14ch;
-  font-size: clamp(2.65rem, 5vw, 4.8rem);
-  line-height: 1.04;
-  letter-spacing: -.055em;
+  max-width: 16ch;
+  font-size: clamp(2.35rem, 3.7vw, 3.7rem);
+  line-height: 1.08;
+  letter-spacing: -.045em;
 }
 h1 span { color: var(--signal-dark); }
-.hero-intro { max-width: 620px; color: var(--muted); font-size: .98rem; }
+.hero-intro { max-width: 610px; color: var(--muted); font-size: .92rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
 .button {
   display: inline-flex;
@@ -173,14 +174,15 @@ h1 span { color: var(--signal-dark); }
 .robot::before, .robot::after {
   content: "";
   position: absolute;
-  left: -9px;
-  width: 84px;
-  height: 8px;
-  border-left: 9px solid var(--ink);
-  border-right: 9px solid var(--ink);
+  top: 10px;
+  width: 8px;
+  height: 18px;
+  border-radius: 2px;
+  background: var(--ink);
+  box-shadow: 0 46px 0 var(--ink);
 }
-.robot::before { top: 12px; }
-.robot::after { bottom: 12px; }
+.robot::before { left: -8px; }
+.robot::after { right: -8px; }
 .robot-a { left: 25%; bottom: 16%; transform: rotate(-8deg); }
 .robot-b { right: 23%; top: 15%; transform: rotate(7deg); }
 .conflict-zone {
@@ -211,9 +213,9 @@ h1 span { color: var(--signal-dark); }
 .section-heading h2,
 .contact h2 {
   margin-bottom: 0;
-  font-size: clamp(2.3rem, 5vw, 4.5rem);
-  line-height: 1;
-  letter-spacing: -.045em;
+  font-size: clamp(1.8rem, 3.2vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: -.035em;
 }
 .section-index { color: var(--signal-dark); }
 .about-grid {
@@ -222,7 +224,7 @@ h1 span { color: var(--signal-dark); }
   gap: clamp(2rem, 7vw, 7rem);
   padding-top: 3rem;
 }
-.about-grid .lead { font-size: clamp(1.45rem, 3vw, 2.25rem); line-height: 1.35; }
+.about-grid .lead { font-size: clamp(1.2rem, 2vw, 1.65rem); line-height: 1.42; }
 .about-grid > p:last-child { color: var(--muted); }
 
 .project-card {
@@ -268,7 +270,7 @@ h1 span { color: var(--signal-dark); }
 .project-copy .tag-list,
 .project-copy .project-links { grid-column: 2; }
 .project-copy > p:not(.project-number) { grid-row: 1 / span 2; }
-.project-copy h3 { font-size: clamp(1.8rem, 3vw, 3rem); line-height: 1.12; }
+.project-copy h3 { font-size: clamp(1.5rem, 2.2vw, 2.2rem); line-height: 1.18; }
 .project-copy > p:not(.project-number) { color: var(--muted); }
 .tag-list { display: flex; flex-wrap: wrap; gap: .45rem; padding: 0; margin: 2rem 0; list-style: none; }
 .tag-list li { padding: .35rem .6rem; border: 1px solid var(--line); font-family: "DM Mono", monospace; font-size: .7rem; }
@@ -277,7 +279,7 @@ h1 span { color: var(--signal-dark); }
 .focus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 3rem; background: var(--line); border: 1px solid var(--line); }
 .focus-grid article { min-height: 260px; padding: 2rem; background: var(--paper); }
 .focus-code { display: inline-block; margin-bottom: 4rem; color: var(--signal-dark); font-family: "DM Mono", monospace; }
-.focus-grid h3 { font-size: 1.35rem; }
+.focus-grid h3 { font-size: 1.18rem; }
 .focus-grid p { color: var(--muted); font-size: .92rem; }
 
 .contact {
@@ -316,7 +318,7 @@ h1 span { color: var(--signal-dark); }
     background: var(--paper);
   }
   .site-nav.open { display: flex; }
-  h1 { font-size: clamp(2.6rem, 12vw, 4.2rem); }
+  h1 { font-size: clamp(2.25rem, 10vw, 3.4rem); }
   .hero-visual { min-height: 370px; }
   .robot { transform: scale(.82); }
   .site-footer { flex-direction: column; }
