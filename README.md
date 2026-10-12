@@ -10,9 +10,10 @@ python3 -m http.server 8000
 
 Then open `http://localhost:8000`.
 
-## Media still needed
+## Media
 
-The first project card intentionally uses a placeholder. Recommended assets:
+The project card currently uses `assets/multi-robot-demo.gif`, an optimized
+Gazebo and RViz recording. Optional additional assets for future project pages:
 
 1. `assets/multi-robot-overview.webp`
    - RViz overview showing both robots, paths, footprints and the map.
@@ -27,9 +28,7 @@ The first project card intentionally uses a placeholder. Recommended assets:
 4. `assets/final-formation.webp`
    - Both robots stopped side by side at the destination.
 
-After adding an image, replace the `.media-placeholder` element in
-`index.html` with an `<img>` using the matching asset path and descriptive alt
-text.
+Use descriptive alt text whenever adding or replacing media.
 
 ## Publishing
 

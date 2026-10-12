@@ -235,20 +235,16 @@ h1 span { color: var(--signal-dark); }
 }
 .project-media {
   min-height: 500px;
-  padding: 2rem;
   background: var(--ink);
 }
-.media-placeholder {
-  display: grid;
-  place-items: center;
-  align-content: center;
+.project-media img {
+  display: block;
+  width: 100%;
   height: 100%;
-  border: 1px dashed rgba(255, 255, 255, .35);
-  color: white;
-  font-family: "DM Mono", monospace;
-  letter-spacing: .14em;
+  min-height: 500px;
+  object-fit: contain;
+  background: var(--ink);
 }
-.media-placeholder small { margin-top: .65rem; color: rgba(255, 255, 255, .6); letter-spacing: normal; }
 .project-copy { padding: clamp(2rem, 5vw, 4rem); }
 .project-copy h3 { font-size: clamp(1.8rem, 3vw, 3rem); line-height: 1.12; }
 .project-copy > p:not(.project-number) { color: var(--muted); }
@@ -300,7 +296,7 @@ h1 span { color: var(--signal-dark); }
   h1 { font-size: clamp(3rem, 15vw, 5rem); }
   .hero-visual { min-height: 370px; }
   .robot { transform: scale(.82); }
-  .project-media { min-height: 330px; padding: 1rem; }
+  .project-media, .project-media img { min-height: 330px; }
   .site-footer { flex-direction: column; }
 }
 
