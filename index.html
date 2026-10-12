@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="lsiwei68-alt 的机器人项目与学习记录。">
+  <title>lsiwei68-alt · Robotics Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="回到顶部">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>lsiwei68-alt</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">菜单</button>
+    <nav id="site-nav" class="site-nav" aria-label="主导航">
+      <a href="#about">关于</a>
+      <a href="#projects">项目</a>
+      <a href="#focus">方向</a>
+      <a href="#contact">联系</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">Robotics · Navigation · Embedded Systems</p>
+        <h1>让多机器人在同一空间里，<span>安全而有序地行动。</span></h1>
+        <p class="hero-intro">
+          我正在学习并构建从 STM32 底层控制到 ROS 导航与多机器人在线协调的完整机器人系统，
+          注重可运行的仿真、清晰的可视化，以及面向真机的工程约束。
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">查看当前项目</a>
+          <a class="button secondary" href="https://github.com/lsiwei68-alt">GitHub 主页</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="双机器人协调示意图">
+        <div class="grid-plane"></div>
+        <div class="route route-a"></div>
+        <div class="route route-b"></div>
+        <div class="robot robot-a"><span>R1</span></div>
+        <div class="robot robot-b"><span>R2</span></div>
+        <div class="conflict-zone"><span>协调区</span></div>
+        <p class="visual-caption">ONLINE COORDINATION / 02 AGENTS</p>
+      </div>
+    </section>
+
+    <section id="about" class="about section-shell section-block">
+      <div class="section-heading">
+        <p class="section-index">01 / ABOUT</p>
+        <h2>从控制器到调度器</h2>
+      </div>
+      <div class="about-grid">
+        <p class="lead">
+          我关注机器人系统里不同层次如何真正连接起来：底盘运动、传感器、定位、路径规划、
+          局部避障，以及多机器人之间的任务协调。
+        </p>
+        <p>
+          当前工作以 ROS 2 和全向移动平台为主，通过可复现的仿真逐步验证算法，再为 Jetson、
+          STM32 和真实麦克纳姆轮底盘的部署保留清晰接口。这个网站将持续记录实现过程、问题与实验结果。
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="projects section-shell section-block">
+      <div class="section-heading">
+        <p class="section-index">02 / SELECTED WORK</p>
+        <h2>当前项目</h2>
+      </div>
+      <article class="project-card">
+        <div class="project-media" role="img" aria-label="等待补充的 RViz 双车演示截图">
+          <div class="media-placeholder">
+            <span>RVIZ DEMO</span>
+            <small>截图 / GIF 待补充</small>
+          </div>
+        </div>
+        <div class="project-copy">
+          <p class="project-number">PROJECT 001</p>
+          <h3>双麦克纳姆轮机器人协同导航</h3>
+          <p>
+            两套带命名空间的 Nav2 共享已知地图，在窄通道中滚动预测两条轨迹的时空冲突，
+            动态分配通行权、生成等待点并在安全后释放，让两辆车最终并排到达目标区域。
+          </p>
+          <ul class="tag-list" aria-label="项目技术栈">
+            <li>ROS 2 Humble</li>
+            <li>Nav2</li>
+            <li>Gazebo Fortress</li>
+            <li>Python</li>
+            <li>RViz</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/lsiwei68-alt/mecanum-multi-robot-navigation">源码与文档 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="focus" class="focus section-shell section-block">
+      <div class="section-heading">
+        <p class="section-index">03 / FOCUS</p>
+        <h2>正在深入的方向</h2>
+      </div>
+      <div class="focus-grid">
+        <article>
+          <span class="focus-code">NAV</span>
+          <h3>移动机器人导航</h3>
+          <p>已知地图定位、全局与局部规划、代价地图、动态避障和全向底盘运动约束。</p>
+        </article>
+        <article>
+          <span class="focus-code">MAS</span>
+          <h3>多机器人协调</h3>
+          <p>轨迹冲突检测、在线优先级、窄通道预约、让行点选择和可解释的调度状态。</p>
+        </article>
+        <article>
+          <span class="focus-code">HW</span>
+          <h3>真机系统集成</h3>
+          <p>Jetson 主控、STM32 实时控制器、传感器接入、局域网通信与仿真到真机迁移。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section-shell section-block">
+      <p class="section-index">04 / CONTACT</p>
+      <h2>继续构建，持续记录。</h2>
+      <p>项目代码、实验记录和后续迭代将持续发布在 GitHub。</p>
+      <a class="button primary" href="https://github.com/lsiwei68-alt">访问 GitHub</a>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <p>© <span id="year"></span> lsiwei68-alt</p>
+    <p>Built for GitHub Pages.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
