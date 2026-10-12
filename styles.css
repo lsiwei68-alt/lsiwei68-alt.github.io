@@ -289,6 +289,13 @@ h1 span { color: var(--signal-dark); }
 }
 .contact h2 { max-width: 12ch; margin-bottom: 1.5rem; }
 .contact p:not(.section-index) { max-width: 600px; }
+.profile-link {
+  display: inline-block;
+  margin-top: .35rem;
+  font-size: .8rem;
+  font-weight: 600;
+  text-underline-offset: 4px;
+}
 .site-footer { display: flex; justify-content: space-between; padding-block: 2rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .8rem; }
 
 @media (max-width: 860px) {
